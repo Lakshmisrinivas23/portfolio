@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Sci-Fi Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #00ffff;
+            overflow-x: hidden;
+        }
+
+        /* Smooth Transitions */
+        * {
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(90deg, #003366, #000033);
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            color: #00ffff;
+            font-size: 1.5rem;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        header nav ul li a {
+            color: #00ffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        header nav ul li a:hover {
+            background-color: #00ffff;
+            color: #000;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: #00ffff;
+            text-shadow: 0 0 20px #00ffff;
+            flex-direction: column;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            animation: glow 2s infinite alternate;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        .hero .cta {
+            background: #00ffff;
+            color: #000;
+            padding: 15px 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff inset;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .hero .cta:hover {
+            background: #000;
+            color: #00ffff;
+            box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff inset;
+        }
+
+        /* Glow Animation */
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+            }
+            100% {
+                text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+            }
+        }
+
+        /* Project Section */
+        .projects {
+            background: linear-gradient(180deg, #000033, #001f3f);
+            padding: 50px 0;
+            text-align: center;
+        }
+        .projects .project-card {
+            background-color: #001f3f;
+            border: 1px solid #00ffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+            margin: 20px;
+            padding: 20px;
+            display: inline-block;
+            width: calc(30% - 40px);
+        }
+        .projects .project-card img {
+            width: 100%;
+            border-bottom: 1px solid #00ffff;
+        }
+        .projects .project-card h3 {
+            color: #00ffff;
+            margin-top: 10px;
+        }
+        .projects .project-card p {
+            color: #00ccff;
+        }
+        .projects .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #001f3f;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .contact form {
+            background-color: #001f3f;
+            border: 1px solid #00ffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact form input,
+        .contact form textarea {
+            background: transparent;
+            border: 1px solid #00ffff;
+            color: #00ffff;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .contact form button {
+            background: #00ffff;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff inset;
+            border-radius: 5px;
+        }
+        .contact form button:hover {
+            background: #000;
+            color: #00ffff;
+            box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff inset;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #001f3f;
+            color: #00ffff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -5px 15px rgba(0, 255, 255, 0.2);
+            border-top: 1px solid #00ffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">3D Portfolio</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my work and journey as a 3D Artist.</p>
+        <a href="#projects" class="cta">View Projects</a>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>My Projects</h2>
+        <div class="project-card">
+            <img src="project1.jpg" alt="Project 1">
+            <h3>Project One</h3>
+            <p>A description of the first project.</p>
+        </div>
+        <div class="project-card">
+            <img src="project2.jpg" alt="Project 2">
+            <h3>Project Two</h3>
+            <p>A description of the second project.</p>
+        </div>
+        <div class="project-card">
+            <img src="project3.jpg" alt="Project 3">
+            <h3>Project Three</h3>
+            <p>A description of the third project.</p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button
